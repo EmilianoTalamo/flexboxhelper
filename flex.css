@@ -18,6 +18,8 @@
 	height: 100vh;
 	padding-top: 20px;
 	position: relative;
+	background-color: white;
+	z-index: 99;
 }
 
 #controles span{
