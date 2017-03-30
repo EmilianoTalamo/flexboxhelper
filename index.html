@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="flex.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<title>Flexbox Helper</title>
+</head>
+<body>
+
+	<div id="controles">
+		<div>
+			<span>flexbox: </span><input type="checkbox" id="flexbox" onchange='handleChange(this);' checked>
+		</div>
+		
+		<div>
+			<span>align-content: </span><select id="aligncontent">
+			  <option value="stretch" selected>stretch</option>
+			  <option value="center">center</option>
+			  <option value="flex-start">flex-start</option>
+			  <option value="flex-end">flex-end</option>
+			  <option value="space-between">space-between</option>
+			  <option value="space-around">space-around</option>
+			</select>
+		</div>
+
+		<div>
+			<span>align-items: </span><select id="alignitems">
+			  <option value="stretch" selected>stretch</option>
+			  <option value="center">center</option>
+			  <option value="flex-start">flex-start</option>
+			  <option value="flex-end">flex-end</option>
+			  <option value="baseline">baseline</option>
+			</select>
+		</div>
+
+		<div>
+			<span>flex-direction: </span><select id="flexdirection">
+			  <option value="row" selected>row</option>
+			  <option value="row-reverse">row-reverse</option>
+			  <option value="column">column</option>
+			  <option value="column-reverse">column-reverse</option>
+			</select>
+	</div>
+
+		<div>
+			<span>flex-wrap: </span><select id="flexwrap">
+			  <option value="nowrap" selected>nowrap</option>
+			  <option value="wrap">wrap</option>
+			  <option value="wrap-reverse">wrap-reverse</option>
+			</select>
+		</div>
+
+		<div>
+			<span>justify-content: </span><select id="justifycontent">
+			  <option value="flex-start" selected>flex-start</option>
+			  <option value="flex-end">flex-end</option>
+			  <option value="center">center</option>
+			  <option value="space-between">space-between</option>
+			  <option value="space-around">space-around</option>
+			</select>
+		</div>
+
+		<footer><a href="http://github.com/emilianotalamo/" target='_blank'><img src="lambtron.png" alt="Emi"></a><p>By Emiliano Talamo with <span id='cuore'>&hearts;</span></p></footer>
+	</div>
+	<div id="magia">
+		<ul id="cajitas">
+			<div class="cajita">1</div>
+			<div class="cajita">2</div>
+			<div class="cajita">3</div>
+			<div class="cajita">4</div>
+			<div class="cajita">5</div>
+			<div class="cajita">6</div>
+			<div class="cajita">7</div>
+			<div class="cajita">8</div>
+			<div class="cajita">9</div>
+			<div class="cajita">10</div>
+			<div class="cajita">11</div>
+			<div class="cajita">12</div>
+			<div class="cajita">13</div>
+			<div class="cajita">14</div>
+			<div class="cajita">15</div>
+			<div class="cajita">16</div>
+			<div class="cajita">17</div>
+			<div class="cajita">18</div>
+			<div class="cajita">19</div>
+			<div class="cajita">20</div>
+			<div class="cajita">21</div>
+			<div class="cajita">22</div>
+			<div class="cajita">23</div>
+			<div class="cajita">24</div>
+			<div class="cajita">25</div>
+			<div class="cajita">26</div>
+			<div class="cajita">27</div>
+		</ul>
+	</div>
+
+	<script>
+		$('input[type=checkbox]').each(function() 
+		{
+			this.checked = true; 
+		});
+	</script>
+	<script src="flex.js"></script>
+
+</body>
+</html>

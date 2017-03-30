@@ -1,0 +1,127 @@
+@font-face{
+	font-family: 'futura';
+	src: url('futura.ttf');
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: futura;
+	font-size: 1em;
+}
+
+#controles{
+	width: 25vw;
+	display: inline-block;
+	vertical-align: top;
+	height: 100vh;
+	padding-top: 20px;
+	position: relative;
+}
+
+#controles span{
+	display: inline-block;
+	width: 50%;
+	text-overflow: clip;
+	line-height: 140%;
+	color: #222;
+}
+
+#controles div{
+	margin-bottom: 10px;
+	padding: 4px 10px;
+}
+
+#controles div:hover{
+	background-color: #F5F5F5;
+	transition: background-color 200ms;
+}
+
+select{
+	text-align: center;
+	width: 50%;
+}
+
+input[type=checkbox]{
+	margin-top: 5px;
+}
+
+#magia{
+	min-height: 100vh;
+	padding-top: 20px;
+	padding-left: 10px;
+	width: 74%;
+	display: inline-block;
+	border-left: 1px solid black;
+}
+
+#cajitas{
+	display: flex;
+	height: 95vh;
+	max-height: 99vh;
+}
+
+.cajita{
+	min-height: 100px;
+	width: 64px;
+	background-color: red;
+	margin: 5px;
+	font-family: monospace;
+	font-size: 2em;
+	text-align: center;
+}
+
+footer{
+	position: absolute;
+	bottom: 3vh;
+	left: 4px;
+	text-overflow: clip;
+	text-align: center;
+	width: 100%;
+	font-size: 1.2em;
+	color: #222;
+}
+
+footer > p{
+	display: block;
+	text-align: center;
+}
+
+footer > p > #cuore{
+	color: red;
+	display: inline;
+}
+
+footer > p > #cuore:hover{
+	animation: flashloco 1s infinite;
+	cursor: default;
+}
+
+footer > a > img{
+	opacity: .8;
+	transition: opacity 200ms linear, transform 200ms ease-in;
+	margin-bottom: 6px;
+}
+
+footer > a > img:hover{
+	opacity: 1;
+	transform: scale(1.05);
+	transition: opacity 200ms linear, transform 200ms ease-out;
+	cursor: pointer;
+}
+
+@keyframes flashloco{
+	0%{
+		color: red;
+	}
+	33%{
+		color: blue;
+	}
+	66%{
+		color: green;
+	}
+	99%{
+		color: red;
+	}
+}
