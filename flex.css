@@ -64,7 +64,7 @@ input[type=checkbox]{
 
 .cajita{
 	min-height: 100px;
-	width: 64px;
+	min-width: 64px;
 	background-color: red;
 	margin: 5px;
 	font-family: monospace;
