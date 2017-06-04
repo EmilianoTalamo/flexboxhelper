@@ -13,13 +13,15 @@
 
 #controles{
 	width: 25vw;
+	min-width: 250px;
 	display: inline-block;
 	vertical-align: top;
 	height: 100vh;
 	padding-top: 20px;
-	position: relative;
+	position: fixed;
 	background-color: white;
 	z-index: 99;
+	border-right: 1px solid rgba(0,0,0,0.4);
 }
 
 #controles span{
@@ -40,8 +42,8 @@
 	transition: background-color 200ms;
 }
 
-select{
-	text-align: center;
+select, input{
+	text-align: left;
 	width: 50%;
 }
 
@@ -52,8 +54,8 @@ input[type=checkbox]{
 #magia{
 	min-height: 100vh;
 	padding-top: 20px;
-	padding-left: 10px;
-	width: 74%;
+	padding-left: 25vw;
+	width: 100vw;
 	display: inline-block;
 	border-left: 1px solid black;
 }

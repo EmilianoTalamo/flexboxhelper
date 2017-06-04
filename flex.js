@@ -1,42 +1,34 @@
-var aligncontent = document.getElementById("aligncontent");
-var alignitems = document.getElementById("alignitems");
-var flexdirection = document.getElementById("flexdirection");
-var flexwrap = document.getElementById("flexwrap");
-var justifycontent = document.getElementById("justifycontent");
+flextarget = document.getElementById("cajitas");
+options = document.getElementById("controles").getElementsByTagName("div");
 
-aligncontent.addEventListener("change", function (evt)
-{
-	document.getElementById("cajitas").style.alignContent = evt.target.value;
-});
+boxes();
+flex();
 
-alignitems.addEventListener("change", function (evt)
-{
-	document.getElementById("cajitas").style.alignItems = evt.target.value;
-});
+options[0].getElementsByTagName("input")[0].onchange = boxes;
+options[1].getElementsByTagName("select")[0].addEventListener("change", flex);
+options[2].getElementsByTagName("select")[0].addEventListener("change", flex);
+options[3].getElementsByTagName("select")[0].addEventListener("change", flex);
+options[4].getElementsByTagName("select")[0].addEventListener("change", flex);
+options[5].getElementsByTagName("select")[0].addEventListener("change", flex);
 
-flexdirection.addEventListener("change", function (evt)
-{
-	document.getElementById("cajitas").style.flexDirection = evt.target.value;
-});
-
-flexwrap.addEventListener("change", function (evt)
-{
-	document.getElementById("cajitas").style.flexWrap = evt.target.value;
-});
-
-justifycontent.addEventListener("change", function (evt)
-{
-	document.getElementById("cajitas").style.justifyContent = evt.target.value;
-});
-
-function handleChange(checkbox)
-{
-	if(checkbox.checked == true)
+function boxes(){
+	var box;
+	var boxqt = document.getElementById("qt").value;
+	flextarget.innerHTML = "";
+	for(var i=1 ; i <= boxqt ; i++)
 	{
-		document.getElementById("cajitas").style.display = 'flex';
+		box = document.createElement("div");
+		box.className = "cajita";
+		flextarget.appendChild(box);
+		box.innerHTML = i;
 	}
-	else
-	{
-		document.getElementById("cajitas").style.display = 'block';
-  }
+};
+
+function flex()
+{
+	flextarget.style.alignContent = options[1].getElementsByTagName("select")[0].value;
+	flextarget.style.alignItems = options[2].getElementsByTagName("select")[0].value;
+	flextarget.style.flexDirection = options[3].getElementsByTagName("select")[0].value;
+	flextarget.style.flexWrap = options[4].getElementsByTagName("select")[0].value;
+	flextarget.style.justifyContent = options[5].getElementsByTagName("select")[0].value;
 }
