@@ -11,7 +11,33 @@
 
 	<div id="controles">
 		<div>
-			<span>Boxes: </span><input type="number" id="qt" value="10">
+			<span>Boxes: </span><input type="number" id="qt" value="10" min="0" max="1000">
+		</div>
+
+		<div>
+			<span>flex-wrap: </span><select id="flexwrap">
+			  <option value="nowrap" selected>nowrap</option>
+			  <option value="wrap">wrap</option>
+			  <option value="wrap-reverse">wrap-reverse</option>
+			</select>
+			<span class="help">?</span>
+			<aside>
+				<p>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.</p>
+			</aside>
+		</div>
+
+		<div>
+			<span>justify-content: </span><select id="justifycontent">
+			  <option value="flex-start" selected>flex-start</option>
+			  <option value="flex-end">flex-end</option>
+			  <option value="center">center</option>
+			  <option value="space-between">space-between</option>
+			  <option value="space-around">space-around</option>
+			</select>
+			<span class="help">?</span>
+			<aside>
+				<p>This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+			</aside>
 		</div>
 		
 		<div>
@@ -23,6 +49,10 @@
 			  <option value="space-between">space-between</option>
 			  <option value="space-around">space-around</option>
 			</select>
+			<span class="help">?</span>
+			<aside>
+				<p>This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. It has no effect when there's only one line of flex items.</p>
+			</aside>
 		</div>
 
 		<div>
@@ -33,6 +63,10 @@
 			  <option value="flex-end">flex-end</option>
 			  <option value="baseline">baseline</option>
 			</select>
+			<span class="help">?</span>
+			<aside>
+				<p>This defines the default behaviour for how flex items are laid out along the cross axis on the current line.</p>
+			</aside>
 		</div>
 
 		<div>
@@ -42,25 +76,13 @@
 			  <option value="column">column</option>
 			  <option value="column-reverse">column-reverse</option>
 			</select>
+			<span class="help">?</span>
+			<aside>
+				<p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
+			</aside>
 	</div>
 
-		<div>
-			<span>flex-wrap: </span><select id="flexwrap">
-			  <option value="nowrap" selected>nowrap</option>
-			  <option value="wrap">wrap</option>
-			  <option value="wrap-reverse">wrap-reverse</option>
-			</select>
-		</div>
 
-		<div>
-			<span>justify-content: </span><select id="justifycontent">
-			  <option value="flex-start" selected>flex-start</option>
-			  <option value="flex-end">flex-end</option>
-			  <option value="center">center</option>
-			  <option value="space-between">space-between</option>
-			  <option value="space-around">space-around</option>
-			</select>
-		</div>
 
 		<footer><a href="https://github.com/EmilianoTalamo/flexboxhelper/" target='_blank'><img src="lambtron.png" alt="Emi"></a><p>By Emiliano Talamo with <span id='cuore'>&hearts;</span></p></footer>
 	</div>

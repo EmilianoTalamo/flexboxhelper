@@ -9,6 +9,7 @@
 	padding: 0;
 	font-family: futura;
 	font-size: 1em;
+	color: #222;
 }
 
 #controles{
@@ -29,7 +30,6 @@
 	width: 50%;
 	text-overflow: clip;
 	line-height: 140%;
-	color: #222;
 }
 
 #controles div{
@@ -44,7 +44,7 @@
 
 select, input{
 	text-align: left;
-	width: 50%;
+	width: 43%;
 }
 
 input[type=checkbox]{
@@ -113,6 +113,43 @@ footer > a > img:hover{
 	transform: scale(1.05);
 	transition: opacity 200ms linear, transform 200ms ease-out;
 	cursor: pointer;
+}
+
+#controles > div > .help{
+	font-family: Verdana;
+	font-weight: bold;
+	width: initial;
+	margin-left: 0.18vw;
+	position: absolute;
+}
+
+.help:hover{
+	cursor: default;
+}
+
+#controles > div > .help + aside{
+	position: relative;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	left: 26px;
+	bottom: 30px;
+	margin: initial;
+	padding: initial;
+}
+
+.help + aside > p{
+	display: none;
+	width: 40vw;
+	padding: 10px;
+	position: absolute;
+	background-color: #212121;
+	color: #fafafa;
+	border: 1px solid #f5f5f5;
+}
+
+.help:hover + aside > p{
+	display: inline-block;
 }
 
 @keyframes flashloco{
